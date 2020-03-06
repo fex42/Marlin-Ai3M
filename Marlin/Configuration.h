@@ -81,7 +81,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(davidramino,felixna)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(felixna,davidramino)" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION   // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 CUSTOM_BUILD_VERSION  // will be shown during bootup in line 2
@@ -379,10 +379,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // i3 Mega stock v5 hotend, 40W heater cartridge (3.6Ω @ 22°C)
-  #define  DEFAULT_Kp 15.94
-  #define  DEFAULT_Ki 1.17
-  #define  DEFAULT_Kd 54.19
+  // Anycubic Mega-S stock hotend (M303 E0 S200 C8)
+  #define DEFAULT_Kp 15.53
+  #define DEFAULT_Ki 0.91
+  #define DEFAULT_Kd 66.46
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -436,10 +436,10 @@
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //Anycubic i3 Mega Ultrabase (0.9Ω @ 22°C)
-  #define DEFAULT_bedKp 251.78
-  #define DEFAULT_bedKi 49.57
-  #define DEFAULT_bedKd 319.73
+  // Anycubic Mega-S Ultrabase with insulation (M303 E-1 S60 C8)
+  #define DEFAULT_bedKp 175.58
+  #define DEFAULT_bedKi 34.57
+  #define DEFAULT_bedKd 222.95
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -1276,8 +1276,8 @@
 // @section temperature
 
 // Preheat Constants
-#define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_HOTEND 200
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_TEMP_HOTEND 240
