@@ -76,7 +76,7 @@
   /**
    * Defines a generic printer name to be output to the LCD after booting Marlin.
    */
-  #define MACHINE_NAME "Anycubic i3 Mega"
+  #define MACHINE_NAME "Anycubic Mega-S"
 
   /**
    * The SOURCE_CODE_URL is the location where users will find the Marlin Source
