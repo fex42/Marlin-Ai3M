@@ -52,12 +52,12 @@ char *itostr2(const uint8_t &x)
   return _conv;
 }
 
-#ifndef ULTRA_LCD
   #define DIGIT(n) ('0' + (n))
   #define DIGIMOD(n, f) DIGIT((n)/(f) % 10)
-  #define RJDIGIT(n, f) ((n) >= (f) ? DIGIMOD(n, f) : ' ')
   #define MINUSOR(n, alt) (n >= 0 ? (alt) : (n = -n, '-'))
 
+#ifndef ULTRA_LCD
+  #define RJDIGIT(n, f) ((n) >= (f) ? DIGIMOD(n, f) : ' ')
 
   char* itostr3(const int x) {
     int xx = x;
@@ -66,7 +66,7 @@ char *itostr2(const uint8_t &x)
     _conv[6] = DIGIMOD(xx, 1);
     return &_conv[4];
   }
-
+#endif
 
   // Convert signed float to fixed-length string with 023.45 / -23.45 format
 
@@ -81,7 +81,6 @@ char *itostr2(const uint8_t &x)
     return &_conv[1];
   }
 
-#endif
 
 AnycubicTFTClass::AnycubicTFTClass() {
 }
